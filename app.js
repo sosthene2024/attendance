@@ -5,8 +5,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-console.log(process.env.SERVER_PORT);
-
 import {
   getUsers,
   getStudents,
@@ -133,6 +131,6 @@ app.put('/students/:id', authToken, async (req, res) => {
   res.send('Student updated');
 });
 
-app.listen(process.env.SERVER_PORT, function () {
+app.listen(process.env.SERVER_PORT || 3306, function () {
   console.log(`App listening on port ${process.env.SERVER_PORT}`);
 });
