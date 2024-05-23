@@ -131,6 +131,6 @@ app.put('/students/:id', authToken, async (req, res) => {
   res.send('Student updated');
 });
 
-app.listen(process.env.SERVER_PORT || 3306, function () {
+app.listen(process.env.SERVER_PORT , function () {
   console.log(`App listening on port ${process.env.SERVER_PORT}`);
 });
