@@ -2,7 +2,6 @@ import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import cors from 'cors';
 
 dotenv.config();
 
@@ -24,12 +23,6 @@ import {
 } from './database.js';
 
 const app = express();
-
-app.use(
-  cors({
-    origin: 'http://127.0.0.1:5500',
-  })
-);
 
 app.use(express.json());
 
